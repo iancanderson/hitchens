@@ -1,7 +1,7 @@
 module Hitchens
   class PostsController < ApplicationController
     def index
-      @posts = Post.all
+      @posts = PostDecorator.decorate Post.all
     end
 
     def new
