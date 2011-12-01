@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Hitchens::Engine => "/hitchens"
+  mount Hitchens::Engine => "/blog"
 end
