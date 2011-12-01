@@ -7,11 +7,11 @@ require "hitchens/version"
 Gem::Specification.new do |s|
   s.name        = "hitchens"
   s.version     = Hitchens::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Hitchens."
-  s.description = "TODO: Description of Hitchens."
+  s.authors     = ["Ian C. Anderson"]
+  s.email       = ["ian@iancanderson.net"]
+  s.homepage    = "http://www.iancanderson.net"
+  s.summary     = "Blog engine for Rails 3.1+"
+  s.description = "Mountable blogging engine with a focus on maintainability and good clean OO design."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
