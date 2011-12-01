@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   # s.add_dependency "jquery-rails"
   s.add_dependency "haml", "~> 3.1.4"
   s.add_dependency "simple_form", "~> 1.5.2"
+  s.add_dependency "draper", "~> 0.9.5"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails", "~> 2.7.0"
