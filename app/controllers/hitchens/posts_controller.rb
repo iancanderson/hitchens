@@ -1,7 +1,7 @@
 module Hitchens
   class PostsController < ApplicationController
     def index
-      @posts = PostDecorator.decorate Post.all
+      @posts = PostDecorator.decorate Post.published
     end
 
     def new
@@ -15,6 +15,10 @@ module Hitchens
       else
         render 'new'
       end
+    end
+
+    def show
+      @post = PostDecorator.published.find params[:id]
     end
 
     def edit
