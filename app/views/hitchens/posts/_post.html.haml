@@ -1,4 +1,7 @@
 %h2= post.title
-%p= post.body_to_html
+%p.dateline
+  = time_tag post.publication_date, post.pubdate_display, pubdate: true
+%p.body= post.body_to_html
+
 = link_to 'Edit', edit_post_path(post) if can? :update, post
 
