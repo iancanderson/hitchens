@@ -9,6 +9,8 @@ gemspec
 gem "jquery-rails"
 # let's give the dummy app devise authentication
 gem "devise", "~> 1.5.2"
+# and postgres
+gem "pg", "~> 0.11.0"
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
