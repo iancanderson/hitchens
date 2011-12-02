@@ -7,7 +7,9 @@ module Hitchens
       if user.admin?
         can :manage, :all
       else
-        can :read, :all
+        can :read, Post, Post.published do |post|
+          post.published
+        end
       end
     end
   end

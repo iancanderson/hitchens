@@ -1,7 +1,7 @@
 module Hitchens
   class ApplicationController < ActionController::Base
     check_authorization
-    authorize_resource
+    load_and_authorize_resource
 
     def current_ability
       # we need to tell CanCan to use our Hitchens::Ability class
