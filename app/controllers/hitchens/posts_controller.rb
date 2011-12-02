@@ -18,7 +18,7 @@ module Hitchens
     end
 
     def show
-      @post = PostDecorator.published.find params[:id]
+      @post = PostDecorator.decorate Post.published.find params[:id]
     end
 
     def edit
