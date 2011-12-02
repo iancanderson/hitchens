@@ -1,5 +1,6 @@
 module Hitchens
   class Post < ActiveRecord::Base
+    default_scope order('publication_date desc')
     scope :published, lambda{ where('publication_date < ?', Time.now) }
 
     def published=(value)
