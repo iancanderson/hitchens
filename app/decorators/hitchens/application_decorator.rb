@@ -14,7 +14,10 @@ private
     def syntax_highlighter(html)
       doc = Nokogiri::HTML(html)
       doc.search("code").each do |pre|
-        pre.replace CodeRay.scan(pre.text.rstrip, pre[:class]).div(:line_numbers => :table)
+        code_ray = CodeRay.scan(pre.text.rstrip, pre[:class]).div
+        # first line of code wasn't indented as much as others
+        # need to add a line break after the pre tag
+        pre.replace code_ray.sub('<pre>', "<pre>\n")
       end
       doc.to_s
     end
