@@ -7,7 +7,6 @@ require 'cancan'
 require 'nokogiri'
 require 'coderay'
 require 'will_paginate'
-require 'rspec-rails' if Rails.env.development?
 
 require 'hitchens/engine'
 
