@@ -1,7 +1,8 @@
-%h2= post.title
-%p.dateline
-  = post.pubdate_tag
-%p.body= post.body_to_html
+= content_tag_for :div, post do
+  %h2= post.title
+  %p.dateline
+    = post.pubdate_tag
+  %p.body= post.body_to_html
 
-= link_to 'Edit', edit_post_path(post) if can? :update, post
+  = link_to 'Edit', edit_post_path(post) if can? :update, post
 
