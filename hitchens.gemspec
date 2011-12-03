@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency "cancan", "~> 1.6.7"
   s.add_dependency "nokogiri", "~> 1.5.0"
   s.add_dependency "coderay", "~> 1.0.4"
+  s.add_dependency "will_paginate", "~> 3.0.2"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails", "~> 2.7.0"

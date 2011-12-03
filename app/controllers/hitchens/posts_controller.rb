@@ -1,6 +1,7 @@
 module Hitchens
   class PostsController < ApplicationController
     def index
+      @posts = @posts.page(params[:page]).per_page(Hitchens.posts_per_page)
       @posts = PostDecorator.decorate @posts
     end
 
