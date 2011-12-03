@@ -16,7 +16,8 @@ module Hitchens
                   :posts_per_page,
                   :use_parent_layout,
                   :user_class_name,
-                  :current_user_helper_name
+                  :current_user_helper_name,
+                  :blog_admin_user_method
 
   #TODO: set these up in the Hitchens initializer file
   self.blog_name = "Ian's test blog"
@@ -25,6 +26,7 @@ module Hitchens
   self.posts_per_page = 5
   self.user_class_name = 'User'
   self.current_user_helper_name = 'current_user'
+  self.blog_admin_user_method = 'blog_admin?'
 
   def self.user_class
     user_class_name.constantize
