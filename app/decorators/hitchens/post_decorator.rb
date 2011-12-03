@@ -16,7 +16,7 @@ module Hitchens
 
   private
     def pubdate_display
-      publication_date.getlocal.strftime("%B %e, %Y at %l:%M %P")
+      publication_date.getlocal.strftime("%A, %B %e, %Y at %l:%M %p")
     end
   end
 end
