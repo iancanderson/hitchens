@@ -7,7 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <p>
+    <% if current_user %>
+      <%= link_to 'sign out', main_app.destroy_user_session_path, method: 'delete' %>
+    <% else %>
+      <%= link_to 'sign in', main_app.new_user_session_path %>
+    <% end %>
+  </p>
   <h1>  PARENT LAYOUT </h1>
+
 <%= yield %>
 
 </body>
