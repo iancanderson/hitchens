@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Hitchens
+    = stylesheet_link_tag    "hitchens/application"
+    = javascript_include_tag "hitchens/application"
+    = auto_discovery_link_tag(:rss, posts_url(format: :rss))
+    = csrf_meta_tags
+  %body
+    = yield
