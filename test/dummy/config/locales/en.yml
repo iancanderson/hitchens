@@ -5,3 +5,9 @@ en:
   hitchens:
     errors:
       access_denied: Access denied.
+      post_not_updated: Post could not be updated.
+    notices:
+      post_deleted: Post successfully deleted.
+      post_created: Post successfully created.
+      post_updated: Post successfully updated.
+
