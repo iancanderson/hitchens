@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hitchens (0.0.2)
+    hitchens (0.0.3)
       cancan (~> 1.6.7)
       coderay (~> 1.0.4)
       draper (~> 0.9.5)
