@@ -1,4 +1,5 @@
 = content_tag_for :div, post do
-  %h2.title= post.title
+  %h2.title
+    = link_to post.title, post
   %p.dateline= post.pubdate_tag
   %p.body= find_and_preserve post.body_to_html
