@@ -1,5 +1,7 @@
 module Hitchens
   class PostsController < ApplicationController
+    load_and_authorize_resource
+
     def index
       @posts = @posts.page(params[:page]).per_page(Hitchens.posts_per_page)
       @posts = PostDecorator.decorate @posts
@@ -24,8 +26,6 @@ module Hitchens
       end
     end
 
-    def new
-    end
     def edit
     end
   end

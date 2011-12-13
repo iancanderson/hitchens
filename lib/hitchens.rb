@@ -17,7 +17,9 @@ module Hitchens
                   :use_parent_layout,
                   :user_class_name,
                   :current_user_helper_name,
-                  :blog_admin_user_method
+                  :blog_admin_user_method,
+                  :sign_in_url_helper,
+                  :sign_out_url_helper
 
   #TODO: set these up in the Hitchens initializer file
   self.blog_name = "Ian's test blog"
@@ -27,6 +29,8 @@ module Hitchens
   self.user_class_name = 'User'
   self.current_user_helper_name = 'current_user'
   self.blog_admin_user_method = 'blog_admin?'
+  self.sign_in_url_helper = 'new_user_session_path'
+  self.sign_out_url_helper = 'destroy_user_session_path'
 
   def self.user_class
     user_class_name.constantize
