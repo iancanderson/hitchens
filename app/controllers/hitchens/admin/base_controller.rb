@@ -14,5 +14,8 @@ module Hitchens
         redirect_to main_app.__send__(Hitchens.sign_in_url_helper)
       end
     end
+    def current_hitchens_user
+      __send__ Hitchens.current_user_helper_name
+    end
   end
 end
