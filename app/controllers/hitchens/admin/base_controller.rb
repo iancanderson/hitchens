@@ -1,5 +1,5 @@
 module Hitchens
-  class Admin::BaseController < ApplicationController
+  class Admin::BaseController < Hitchens::ApplicationController
     before_filter :authenticate_hitchens_admin
     skip_authorization_check :only => [:index]
 
