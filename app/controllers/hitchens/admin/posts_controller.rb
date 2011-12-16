@@ -1,7 +1,7 @@
 module Hitchens
   module Admin
     class PostsController < BaseController
-      load_and_authorize_resource :class => 'Hitchens::Post'
+      load_and_authorize_resource :class => 'Hitchens::Post', :find_by => :slug
 
       def index
         @posts = @posts.page(params[:page]).per_page(Hitchens.posts_per_page)
