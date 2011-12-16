@@ -1,5 +1,7 @@
 Hitchens::Engine.routes.draw do
-  resources :posts
+
+  get '/:id' => 'posts#show', :as => :post
+
   root :to => 'posts#index'
 
   namespace :admin do
