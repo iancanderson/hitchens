@@ -6,5 +6,6 @@
   = f.input :published, as: :boolean
   = f.submit 'save'
 
-%h3 Preview:
-= render :partial => '/hitchens/posts/post', :locals => {:post => Hitchens::PostDecorator.new(@post)}
+- unless post.new_record?
+  %h3 Preview:
+  = render :partial => '/hitchens/posts/post', :locals => {:post => Hitchens::PostDecorator.new(@post)}
