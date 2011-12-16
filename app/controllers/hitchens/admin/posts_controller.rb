@@ -23,11 +23,10 @@ module Hitchens
       def update
         if @post.update_attributes params[:post]
           flash[:notice] = t 'hitchens.notices.post_updated'
-          redirect_to admin_posts_path
         else
           flash[:error] = t 'hitchens.errors.post_not_updated'
-          render 'edit'
         end
+        render 'edit'
       end
 
       def new

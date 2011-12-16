@@ -1,5 +1,10 @@
+%p= link_to 'return to posts', admin_posts_path
+
 = simple_form_for [:admin, post] do |f|
   = f.input :title
   = f.input :body
   = f.input :published, as: :boolean
   = f.submit 'save'
+
+%h3 Preview:
+= render :partial => '/hitchens/posts/post', :locals => {:post => Hitchens::PostDecorator.new(@post)}
