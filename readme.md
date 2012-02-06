@@ -10,6 +10,7 @@ Specify in Gemfile:
     gem 'hitchens'
 
 Add this line to your parent application's routes.rb:
+
     mount Hitchens::Engine, :at => "/blog"
 
 Use an authentication gem that defines current_user, such as devise.
