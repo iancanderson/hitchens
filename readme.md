@@ -1,3 +1,5 @@
+## THIS PROBABLY DOESN'T WORK AT ALL SO SORRY
+
 # Hitchens
 
 - Mountable blog engine for Rails 3.1+
